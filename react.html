@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Notes</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Day - 1 & Day - 4 Tasks (React.JS)</h2>
+    <h3>1. What is React & its features?</h3>
+    <p>React is an open-source front-end JavaScript library that is used for building user interfaces, especially for single-page applications. It is used for handling view layer for web and mobile apps. React was created by Jordan Walke, a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012.</p>
+    <h4>React Features -</h4>
+    <ol type="1">
+        <li>It will make use of the virtual DOM rather than real DOM (Data Object Model) as RealDOM manipulations are expensive.</li>
+        <li>It follows unidirectional data binding or data flow.</li>
+        <li>It uses reusable or composable UI components for developing the view.</li>
+        <li>it always create the application which will be Single page application.</li>
+    </ol>
+    <br/>
+
+    <h3>2. What are the advantages of using React?</h3>
+    <ol type="1">
+        <li>Its a easy learning curve.</li>
+        <li>Use of Virtual DOM to improve efficiency - React uses virtual DOM to render the view. As the name suggests, virtual DOM is a virtual representation of the real DOM. Each time the data changes in a react app, a new virtual DOM gets created. Creating a virtual DOM is much faster than rendering the UI inside the browser. Therefore, with the use of virtual DOM, the efficiency of the app improves.</li>
+        <li>Gentle learning curve - React has a gentle learning curve when compared to frameworks like Angular. Anyone with little knowledge of javascript can start building web applications using React.</li>
+        <li>SEO friendly - React allows developers to develop engaging user interfaces that can be easily navigated in various search engines. It also allows server-side rendering, which boosts the SEO of an app.</li>
+        <li>Reusable components - React uses component-based architecture for developing applications. Components are independent and reusable bits of code. These components can be shared across various applications having similar functionality. The re-use of components increases the pace of development.</li>
+    </ol>
+    <br/>
+
+    <h3>3. What is SPA?</h3>
+    <ol type="1">
+        <li>SPA stands for Single Page Application.</li>
+        <li>Any web application, in which when you are clicking on any button or selecting option from navigation bar then if your page which means browser page is reloading then that means that application is your multi - page application . If it does not reload the browser page and just only updates the page without reloading then that application is known as Single Page application.</li>
+        <li>SPA will manage using components or React-Router through in React.</li>
+    </ol>
+    <br/>
+
+    <h3>4. What is CRA?</h3>
+    <ol type="1">
+        <li>The create-react-app is a tool/boilerplate that allow us to create quickly and run our application quickly without any config.</li>
+        <li>It is a easiest way for creating react application.</li>
+        <li>While creating cra it provide a default setup which includes module bundler(webpack) and babel and other required module also.</li>
+    </ol>
+    <br/>
+
+    <h3>5. What is JSX?</h3>
+    <ol type="1">
+    <li>JSX stands for JavaScript XML. It allows us to write HTML inside JavaScript and place them in the DOM without using functions like appendChild( ) or createElement( ).</li>
+    <li>As stated in the official docs of React, JSX provides syntactic sugar for React.createElement( ) function.</li> 
+    <li>It allows to write HTML inside the Javascript.</li>
+    </ol>
+    <br/>
+
+    <h3>6. What is Virtual DOM?</h3>
+    <ol type="1">
+        <li>The Virtual DOM is an in-memory representation of Real-DOM.</li>
+        <li>The representation of a UI is kept in memory and synced with the "real" DOM.</li>
+        <li>It's a step that happens between the render function being called and the displaying of elements on the screen.</li>
+        <li>This entire process is called reconciliation.</li>
+    </ol>
+        <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OR</b>
+        <br/>
+    <ol type="1">
+        <li>First of all we understand that what is dom so whenever the html css and 
+        javascript file goes to browser and run first time then it will create tree like structure
+        this structure is also known as document object model.</li>
+        <li>So react is used special like dom called virtual dom instead of real dom, other js framework updates real dom which makes
+        the web application slow.</li>
+        <li>Whenever any react application gets loaded on screen for the first time react component
+        gets mounted.</li>
+        <li>Now when any user makes changes on the screen like button click bcz of which the state variable will get updated so
+        in this cases the change will not directly go to real DOM instead react uses virtual dom 
+        so we are having two virtual dom one virtual dom created during mounting of component so it si a copy of real dom
+        and another virtual dom contains the new updates, states Now this two virtual dom will get compared to each other and will check for the new changes this 
+        complete procedure known as "diffing algorithm."</li>
+        <li>Now the new changes will be updated in our real dom this process is known as "Reconciliation"
+        So manipulating virtual dom is much faster.</li>
+    </ol>
+    <br/>
+
+    <h3>7. What is Babel?</h3>
+    <ol type="1">
+        <li>Babel is a toolchain that is mainly used to convert ECMAScript code into a backwards compatible version of JavaScript.</li>
+        <li>Babel has support for the latest version of JavaScript through syntax transformers.</li>
+        <li>Babel is a JavaScript compiler that includes the ability to compile JSX into regular JavaScript.</li>
+    </ol>
+    <br/>
+
+    <h3>8. Differentiate between Library & Framework?</h3>
+     <ol type="1">
+     <b>Library - </b>
+         <li>It is a collection of functions -In case of library the Execution of code will be decided by the developers Means developers are in charge of the flow of the whole application.</li>
+         <li>We are choosing when and where to call the library.</li>
+         <li>In case of library its developers duty to design the structure.</li>
+         <li>Library follows View model.</li>
+    </ol>
+    <br/>
+    <ol type="1">
+    <b>Framework -</b>
+        <li>Framework is a collection of multiple other libraries.</li>
+        <li>In case of framework the execution is already defined or decided.</li>
+        <li>The framework is in charge of the flow of the whole application.</li>
+        <li>It provides some places for we have to plug in our code, but it calls the code you plugged in as needed.</li>
+        <li>Framework provides you a structure in which we just put down the code our functionality. It follows MVC structure (model view controller)</li>
+    </ol>
+    <br/>
+       
+    <h3>9. Named export and Default export?</h3>
+    <ol type="1">
+        <li>Whenever we want to multiple export inside single file then we use named export bcz default export allow only one export inside any file.</li> 
+        <li>If we want named export then just put export keyword before any function/object/class component.</li> 
+        <li>While importing in case of named export we enclose inside curly braces bcs we can import multiple variable form single file.</li> 
+        <li>But in case of default export we do not need to enclose inside curly brace while importing bcs it is only one export.</li> 
+   </ol>  
+   <br/>
+
+    <h3>10. Differentiate between Class and Functional Components?</h3>
+    <h4>Class Components -</h4>
+    <ol type="1">
+        <li>A class component requires you to extend from React. Component and create a render function which returns a React element.</li>
+        <li>It must have the render() method returning JSX (which is syntactically similar to HTML)</li>
+        <li>Also known as Stateful components because they implement logic and state.</li>
+        <li>React lifecycle methods can be used inside class components (for example, componentDidMount).</li>
+        <li>It requires different syntax inside a class component to implement hooks.
+            <pre>
+                example -
+                constructor(props){
+                super(props);
+                this.state = {name:''}
+                }
+            </pre>
+        </li>
+        <li>Constructor are used as it needs to store state.</li>
+    </ol>
+        <br/>
+    <h4>Functional Components -</h4>
+    <ol>
+       <li>A functional component is just a plain JavaScript function that accepts props as an argument and returns a React element.</li>
+       <li>There is no render method used in functional components.</li>
+       <li>Also known as Stateless components as they simply accept data and display them in some form, that they are mainly responsible for rendering UI.</li>
+       <li>React lifecycle methods (for example, componentDidMount) cannot be used in functional components.</li>
+       <li>Hooks can be easily used in functional components to make them Stateful.
+        <pre>
+            example -
+            const [name,SetName]= React.useState('')
+        </pre>
+       </li>
+       <li>Constructors are not used.</li>
+    </ol>
+    <br/>
+
+    <h3>11. Differentiate between stateful and stateless components?</h3>
+    <h4>Stateful Components -</h4>
+    <ol type="1">
+        <li>Stores info about component’s state change in memory.</li>
+        <li>Have authority to change state.</li>
+        <li>Contains the knowledge of past, current and possible future changes in state.</li>
+        <li>Stateless components notify them about the requirement of the state change, then they send down the props to them.</li>
+    </ol>
+    <h4>Stateless Components -</h4>
+    <ol type="1">
+        <li>Calculates the internal state of the components.</li>
+        <li>Do not have the authority to change state.</li>
+        <li> Contains no knowledge of past, current and possible future state changes.</li>
+        <li>They receive the props from the Stateful components and treat them as callback functions.</li>
+    </ol>
+    <br/>
+
+    <h3>12. What is react props?</h3>
+    <ol>
+        We know that the react is all about the component and that all component are connected to each others like in parent-child / sibling relations but if we want to communicate/pass data with each other then how it is passed then there is props comes into picture
+        so props are used to pass data from parent component to child component.<br/>
+        
+        <h4>Props -</h4>
+        1. Props are arguments passed into React components.<br/>
+        2. Props stand for "Properties." They are read-only components. It is an object which stores the value of attributes of a tag and work similar to the HTML attributes.<br/>
+        3. Props are passed to components via HTML attributes.<br/>
+        4. Props stands for properties.<br/>
+        5. React Props are like function arguments in JavaScript and attributes in HTML.<br/>
+    </ol>
+    <br/>
+    
+    <h3>13. What is react state?</h3>
+    <ol>
+        1. The state is an updatable structure that is used to contain data or information about the component.<br/>
+        2. The state in a component can change over time. The change in state over time can happen as a response to user action or system event.<br/> 
+        3. A component with the state is known as stateful components.<br/> 
+        4. It is the heart of the react component which determines the behavior of the component and how it will render.<br/> 
+        5. They are also responsible for making a component dynamic and interactive.<br/>
+        6. It can be update by using the setState() method.
+    </ol>
+    <br/>
+
+    <h3>14. What is react life cycle & its methods?</h3>
+
+    <ol>
+    <h4>Lifecycle Methods ( Class Component )</h4>
+        <h4>I. Mounting Phase -</h4>
+    <p>
+        When an instance of a component is being created and inserted into the DOM.<br/>
+        <h5>1. Constructor &nbsp;&nbsp;[Only in mounting]  &nbsp;&nbsp;//initialize the state & bind the event </h5>
+        <p> 
+            - A special type of function that will get called whenever a new component is created.<br/>
+            - Used to initialize states & Binding events.<br/>
+            - Not perform, Http req.<br/>
+        </p>
+
+        <h5>2. static getDerivedStateFromProps &nbsp;&nbsp;[rarely used]</h5>
+        <p>
+            - When the state of component depends on change in props.<br/>
+            - set the state.<br/>
+            - Not perform, Http req.<br/>
+        </p>
+
+        <h5>3. render</h5>
+        <p>
+            - Only Required Method.<br/>
+            - Return JSX.<br/>
+            - Children component Lifecycle methods also get execute.<br/>
+            - Not perform, Http req.<br/>
+        </p>
+        
+        <h5>4. componentDidMount &nbsp;&nbsp;[Only in mounting]</h5>
+        <p>
+            - Invoked immediately after a component and its child components have been rendered to DOM.<br/>
+            - Perform any AJAX call to load data.<br/>
+        </p>
+    </p>
+
+        <h4>II. Updating Phase -</h4>
+    <p>
+        When a component is being re-render as a result of changes to either its props or state.<br/>
+        <h5>1. static getDerivedStateFromProps</h5>
+        <p>
+            - Method is called every time a component is re-rendered.<br/>
+            - set the state<br/>
+            - Not perform, Http req.<br/>
+        </p>
+
+        <h5>2. shouldComponentUpdate</h5>
+        <p>
+            - Dictates if the component should re-render or not.<br/>
+            - Performance Optimization<br/>
+            - Not perform, Http req.<br/>
+        </p>
+
+        <h5>3. render</h5>
+        <p>
+            - Only Required Method<br/>
+            - Return JSX<br/>
+            - Not perform, Http req.<br/>
+        </p>
+
+        <h5>4. getSnapshotBeforeUpdate() &nbsp;&nbsp;[Rarely Used]</h5>
+        <p>
+            - Called right before the changes from the virtual DOM are to be reflected in the DOM.<br/>
+            - Capture some Information From DOM.<br/>
+        </p>
+
+        <h5>5. componentDidUpdate()</h5>
+        <p>
+            - called after the render is finished in the re-render cycles.
+        </p>
+    </p>
+
+        <h4>III. Unmounting Phase &nbsp;&nbsp;( LAST WISH ) -</h4> 
+    <p>
+        When a component is being removed from the DOM.<br/>
+        <h5>1. componentWillUnmount</h5>
+        <p>
+            - Method is invoked immediately before a component is unmounted and destroyed.<br/>
+            - Cancelling any network req., also invalidating timers.<br/>
+            - Do Not Call The SetState Method.<br/>
+        </p>
+    </p>
+    </ol>
+    </body>
+</body>
+</html>
