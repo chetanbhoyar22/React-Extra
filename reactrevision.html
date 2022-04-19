@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Notes</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Day - 6 Tasks (React.JS)</h2>
+    <h3>Q. No. 1. What is Virtual DOM?</h3>
+    <ol type="1">
+        <li>DOM stands for Document Object Model. Whenever any HTML, CSS, javascript application gets loaded for the first time on the browser then the browser creates Document object model of that file, and whenever we changes anything in application then the complete DOM is rerendered again and again.</li><br/>
+        <li>In case of react, the DOM is created whenever our react components mounted on the screen for the first time. Now when we makes any changes on the screen like button click because of which the state variable gets updated so in this case the real DOM not directly changed the updates, for this in react we have a concept known as Virtual DOM. In react we use virtual DOM to update the real DOM.</li><br/>   
+        <li>We are having two virtual doms in react, first one is virtual dom gets created at the time of mounting of react component so it is a copy of our real DOM, and second one is virtual DOM contains all the new changes, updated values of state variables. Now both the virtual DOMs get compared with each other and will check for the new changes, this complete procedure is known as Diffing algorithm. Now the new changes will be updated in our Real DOM, this procedure is known as Reconciliation.</li>
+    </ol>
+
+    <h3>Q. No. 2. What is SPA?</h3>
+    <ol type="1">
+        <li>SPA stands for Single Page Application.</li><br/>
+        <li><b>For Example -</b> Any web application, in which when you are clicking on any button or selecting option from navigation bar then if your page which means browser page is reloading then that means that application is your multi - page application . If it does not reload the browser page and just only updates the page without reloading then that application is known as Single Page application.</li><br/>
+        <li>SPA will manage using components or React-Router through in React.</li>
+    </ol>
+
+    <h3>Q. No. 3. Explain life cycle phases and methods in react?</h3>
+    <ol>
+        <h4>Lifecycle Methods ( Class Component )</h4>
+            <h4>I. Mounting Phase -</h4>
+        <p>
+            When an instance of a component is being created and inserted into the DOM.<br/>
+            <h5>1. Constructor &nbsp;&nbsp;[Only in mounting]  &nbsp;&nbsp;//initialize the state & bind the event </h5>
+            <p> 
+                - A special type of function that will get called whenever a new component is created.<br/>
+                - Used to initialize states & Binding events.<br/>
+                - Not perform, Http req.<br/>
+            </p>
+    
+            <h5>2. static getDerivedStateFromProps &nbsp;&nbsp;[rarely used]</h5>
+            <p>
+                - When the state of component depends on change in props.<br/>
+                - set the state.<br/>
+                - Not perform, Http req.<br/>
+            </p>
+    
+            <h5>3. render</h5>
+            <p>
+                - Only Required Method.<br/>
+                - Return JSX.<br/>
+                - Children component Lifecycle methods also get execute.<br/>
+                - Not perform, Http req.<br/>
+            </p>
+            
+            <h5>4. componentDidMount &nbsp;&nbsp;[Only in mounting]</h5>
+            <p>
+                - Invoked immediately after a component and its child components have been rendered to DOM.<br/>
+                - Perform any AJAX call to load data.<br/>
+            </p>
+        </p>
+    
+            <h4>II. Updating Phase -</h4>
+        <p>
+            When a component is being re-render as a result of changes to either its props or state.<br/>
+            <h5>1. render</h5>
+            <p>
+                - Only Required Method<br/>
+                - Return JSX<br/>
+                - Not perform, Http req.<br/>
+            </p>
+    
+            <h5>2. componentDidUpdate()</h5>
+            <p>
+                - called after the render is finished in the re-render cycles.
+            </p>
+        </p>
+    
+            <h4>III. Unmounting Phase &nbsp;&nbsp;( LAST WISH ) -</h4> 
+        <p>
+            When a component is being removed from the DOM.<br/>
+            <h5>1. componentWillUnmount</h5>
+            <p>
+                - Method is invoked immediately before a component is unmounted and destroyed.<br/>
+                - Cancelling any network req., also invalidating timers.<br/>
+                - Do Not Call The SetState Method.<br/>
+            </p>
+        </p>
+        </ol>
+        
+    <h3>Q. No. 4. Difference between class components and functional components?</h3>
+    <h4>Class Components -</h4>
+    <ol type="1">
+        <li>A class component requires you to extend from React. Component and create a render function which returns a React element.</li>
+        <li>It must have the render() method returning JSX (which is syntactically similar to HTML)</li>
+        <li>Also known as Stateful components because they implement logic and state.</li>
+        <li>React lifecycle methods can be used inside class components (for example, componentDidMount).</li>
+        <li>It requires different syntax inside a class component to implement hooks.
+            <pre>
+                example -
+                constructor(props){
+                super(props);
+                this.state = {name:''}
+                }
+            </pre>
+        </li>
+        <li>Constructor are used as it needs to store state.</li>
+    </ol>
+        <br/>
+    <h4>Functional Components -</h4>
+    <ol type="1">
+       <li>A functional component is just a plain JavaScript function that accepts props as an argument and returns a React element.</li>
+       <li>There is no render method used in functional components.</li>
+       <li>Also known as Stateless components as they simply accept data and display them in some form, that they are mainly responsible for rendering UI.</li>
+       <li>React lifecycle methods (for example, componentDidMount) cannot be used in functional components.</li>
+       <li>Hooks can be easily used in functional components to make them Stateful.
+        <pre>
+            example -
+            const [name,SetName]= React.useState('')
+        </pre>
+       </li>
+       <li>Constructors are not used.</li>
+    </ol>
+
+    <h3>Q. No. 5. In react why we move from class components to function components?</h3>
+    <ol type="1">
+        <li>Because of javascript is a functional programming language, thats why we are moving from class component to function components.</li>
+    </ol>
+    
+    <h3>Q. No. 6. What is routing?</h3>
+    <ol type="1">
+        <li>Routing is a process in which a user is directed to different pages based on their action or request. ReactJS Router is mainly used for developing Single Page Web Applications. React Router is used to define multiple routes in the application.</li><br/>
+        <li>When a user types a specific URL into the browser, and if this URL path matches any 'route' inside the router file, the user will be redirected to that particular route.</li>
+        <br/>
+        <li>React Router is a standard library system built on top of the React and used to create routing in the React application using React Router Package.</li><br/>
+        <li>It provides the synchronous URL on the browser with data that will be displayed on the web page. It maintains the standard structure and behavior of the application and mainly used for developing single page web applications.</li>
+    </ol>
+</body>
+</html>
