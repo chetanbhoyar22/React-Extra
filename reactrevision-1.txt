@@ -1,0 +1,101 @@
+Interview Preparation Questions - (Day 1)
+
+1. Differentiate between Real DOM and Virtual DOM?
+Ans -
+
+Real DOM -
+
+i) DOM is a language-neutral interface allowing programs and scripts to dynamically access and 
+   update multiple objects like content, structure, and style of  a document.
+
+ii) The DOM represents the document as nodes and objects.
+
+iii) It is an objects-oriented representation of a web page, modified with a scripting language like
+     javascript.
+
+Virtual DOM -
+
+i) Is a collection of modules designed to provide a declarative way to represent the DOM for an
+   application.
+
+ii) A virtual DOM object is a representation of a DOM object, like a lightweight copy.
+
+iii) Virtual DOM is ideal for mobile-first applications.
+
+
+2. What is React? What are its features?
+Ans -
+
+React is an open-source front-end JavaScript library that is used for building user 
+interfaces, especially for single-page applications. It is used for handling view layer for web 
+and mobile apps. React was created by Jordan Walke, a software engineer working for Facebook. 
+React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012.
+
+React Features -
+    
+i) It will make use of the virtual DOM rather than real DOM (Data Object Model) as RealDOM 
+   manipulations are expensive.
+
+ii) It follows unidirectional data binding or data flow.
+
+iii) It uses reusable or composable UI components for developing the view.
+    
+iv) It always create the application which will be Single page application.
+
+
+3. Advantages of React over vue and angular?
+Ans -
+
+i) React -
+
+A) React is an open-source, front-end library developed by Facebook that’s used for creating web and mobile applications. React is termed as a library because, in an MVC architecture, it’s only the view layer and not a complete architecture.
+
+B) The plus point here is that React is very flexible and can be connected with several packages that have been developed for it, which helps in the development of a complete application.
+
+ii) Vue -
+
+A) Vue is an open-source, front-end library developed by Evan You, an ex-Google employee. Vue is used for creating web applications, and like React, it’s not a complete MVC framework.
+
+B) The packages developed for Vue are lesser than that of React due to its lower popularity, which makes it a challenge to select packages that provide functionality relevant to a particular scenario.
+
+iii) Angular -
+
+A) Angular is an open-source, front-end framework developed by Google, used for creating web applications. Angular is termed as a framework because it includes enough functionality out of the box for the development of a complete web application.
+
+B) The advantage here is that you don’t need to go through packages and then select from those. Instead, you can start working directly without worrying about adding functionalities via different packages.
+
+
+4. Library vs Framework?
+Ans -
+
+A) Library - 
+
+i) It is a collection of functions -In case of library the Execution of code will be decided by the developers Means developers are in charge of the flow of the whole application.
+
+ii) We are choosing when and where to call the library.
+
+iii) In case of library its developers duty to design the structure.
+
+iv) Library follows View model.
+    
+B) Framework -
+        
+i) Framework is a collection of multiple other libraries.
+
+ii) In case of framework the execution is already defined or decided.
+
+iii) The framework is in charge of the flow of the whole application.
+
+iv) It provides some places for we have to plug in our code, but it calls the code you plugged in as needed.
+
+v)Framework provides you a structure in which we just put down the code our functionality. It follows MVC structure (model view controller)
+
+
+5. What is JSX?
+Ans -
+
+i) JSX stands for JavaScript XML. It allows us to write HTML inside JavaScript and place them in the DOM without using functions like appendChild( ) or createElement( ).
+
+ii) As stated in the official docs of React, JSX provides syntactic sugar for React.createElement( ) function.
+
+iii) It allows to write HTML inside the Javascript.
